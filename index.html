@@ -8,18 +8,14 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>{{ greet('Afternoon') }}</h1>
-      <h1>Name: {{ name }}</h1>
-      <h1>Job: {{ job }}</h1>
-      <h1>Age: {{ age }}</h1>
-      <a v-bind:href="website">Dribbble</a>
-      or
-      <a :href="website">Dribbble</a>
-      <p v-html="websiteTag"></p>
-      <br>
-      <input type="text" v-bind:value="job">
+      <h1>Events</h1>
+      <button v-on:click="add(1)">Add a Year</button>
+      <button @click="subtract(1)">Subtract a Year</button>
+      <button v-on:dblclick="add(10)">Add 10 Years</button>
+      <button @dblclick="subtract(10)">Subtract 10 Years</button>
+      <p>My age is {{ age }}</p>
+      <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
     </div>
-
     <script src="app.js"></script>
   </body>
 </html>
