@@ -3,7 +3,9 @@ new Vue({
   data: {
     name: 'Chris',
     job: 'Developer',
-    age: '35'
+    age: '35',
+    website: 'https://www.dribbble.com',
+    websiteTag:'<a href="https://www.dribbble.com">The Site</a>'
   },
   methods:{
     greet:function(time){
