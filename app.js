@@ -1,23 +1,18 @@
 new Vue({
   el: '#vue-app',
   data: {
-    age: 24,
-    x: 0,
-    y: 0
+    available: false,
+    nearby: false
   },
   methods: {
-    add:function(inc){
-      this.age += inc;
-    },
-    subtract:function(dec){
-      this.age -= dec;
-    },
-    updateXY:function(event){
-      this.x = event.offsetX;
-      this.y = event.offsetY;
-    },
-    click:function(){
-      alert('You clicked me');
-    },
+
+  },
+  computed: {
+    compClasses: function(){
+      return {
+        available: this.available,
+        nearby: this.nearby
+      }
+    }
   }
 });

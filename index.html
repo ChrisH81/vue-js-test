@@ -8,15 +8,19 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>Events</h1>
-      <button v-on:click.once="add(1)">Add a Year</button>
-      <button @click="subtract(1)">Subtract a Year</button>
-      <button v-on:dblclick="add(10)">Add 10 Years</button>
-      <button @dblclick="subtract(10)">Subtract 10 Years</button>
-      <p>My age is {{ age }}</p>
-      <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
-      <a v-on:click.prevent="click" href="https://www.dribbble.com">Site</a>
+
+      <h1>Dynamic CSS</h1>
+      <h2>Example 1</h2>
+      <!-- <div v-on:click="available = !available" v-bind:class="{available: available}">
+        <span>Ryu</span>
+      </div> -->
+      <h2>Example 2</h2>
+      <button v-on:click="nearby= !nearby">Toggle nearby</button>
+      <button v-on:click="available = !available">Toggle available</button>
+      <div v-bind:class="compClasses">
+        <span>Ryu</span>
       </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
